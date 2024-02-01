@@ -31,10 +31,7 @@ public class Rol extends ModeloBase {
         return "rol";
     }
 
-    @Override
-    protected Object createObjectFromResultSet(ResultSet resultSet) throws SQLException {
-        return null;
-    }
+
 
     @Override
     public String toString() {

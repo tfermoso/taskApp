@@ -78,10 +78,6 @@ public class Task extends ModeloBase{
         return "task";
     }
 
-    @Override
-    protected Object createObjectFromResultSet(ResultSet resultSet) throws SQLException {
-        return null;
-    }
 
     @Override
     public String toString() {
