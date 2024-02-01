@@ -51,7 +51,15 @@ public abstract class ModeloBase {
         sql = "delete from " + getNombreTabla() + " where " + sql;
         return ejecutarQuery(sql, parametros);
     }
-
+    //Método que devuelve la conexion a la bbdd
+    public Connection getConnection(){
+        try {
+            Connection conexion=DriverManager.getConnection(URL,USUARIO,PASSWORD);
+            return conexion;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
     // Método genérico para ejecutar consultas SQL
     private boolean ejecutarQuery(String sql, Object... parametros) {
         try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
@@ -77,6 +85,7 @@ public abstract class ModeloBase {
 
     //Método genérico para ejecutar consulta SELECT
     protected List<Object> ejecutarQuerySelect(String sql,Object ...parametros){
+        List<Object> result=new ArrayList<>();
         try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
              PreparedStatement preparedStatement = conexion.prepareStatement(sql)) {
             // Establecer los valores de los parámetros
@@ -85,10 +94,12 @@ public abstract class ModeloBase {
             }
             ResultSet resultSet=preparedStatement.executeQuery();
 
+
         }catch (SQLException e){
             e.printStackTrace();
 
         }
+        return null;
     }
 
     protected abstract Object createObjectFromResultSet(ResultSet resultSet) throws SQLException;

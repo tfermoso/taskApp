@@ -3,9 +3,10 @@ import models.User;
 
 public class Main {
     public static void main(String[] args) {
+        User user= new User();
+        System.out.println(user.login("lolo","1111").toString());
 
         TaskController taskController=new TaskController();
-        System.out.println(taskController.createUser("lolo","123",2));
-        System.out.println(taskController.editPassword("lolo","1111"));
+
     }
 }
