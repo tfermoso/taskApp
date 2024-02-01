@@ -20,13 +20,6 @@ public class User extends ModeloBase{
         return "user";
     }
 
-    @Override
-    protected Object createObjectFromResultSet(ResultSet resultSet) throws SQLException {
-        User user=new User();
-        user.iduser=resultSet.getInt("iduser");
-
-        return null;
-    }
 
     @Override
     public String toString() {

@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938e2adc-6c73-4380-8320-86994825b58c" name="Changes" comment="Creando Consulta Select">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="938e2adc-6c73-4380-8320-86994825b58c" name="Changes" comment="login">
       <change beforePath="$PROJECT_DIR$/src/models/ModeloBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/ModeloBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706802118213</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="login">
+      <option name="closed" value="true" />
+      <created>1706803567522</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706803567522</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -123,6 +128,7 @@
     <MESSAGE value="script sql" />
     <MESSAGE value="Modelos" />
     <MESSAGE value="Creando Consulta Select" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creando Consulta Select" />
+    <MESSAGE value="login" />
+    <option name="LAST_COMMIT_MESSAGE" value="login" />
   </component>
 </project>
