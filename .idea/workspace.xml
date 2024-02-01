@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="938e2adc-6c73-4380-8320-86994825b58c" name="Changes" comment="script sql">
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/ModeloBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Rol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Task.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/User.java" afterDir="false" />
+    <list default="true" id="938e2adc-6c73-4380-8320-86994825b58c" name="Changes" comment="Modelos">
+      <change afterPath="$PROJECT_DIR$/src/controller/TaskController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TaskApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TaskApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,12 +90,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706716225347</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Modelos">
+      <option name="closed" value="true" />
+      <created>1706717950696</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1706717950696</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tareas APP" />
     <MESSAGE value="script sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="script sql" />
+    <MESSAGE value="Modelos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelos" />
   </component>
 </project>
