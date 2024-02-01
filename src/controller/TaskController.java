@@ -1,9 +1,12 @@
 package controller;
 
+import models.Task;
 import models.User;
 
+import java.time.LocalDate;
+
 public class TaskController {
-    private User userLogged;
+    public User userLogged;
 
     public boolean login(String username,String password){
 
@@ -24,5 +27,11 @@ public class TaskController {
     public boolean editPassword(String username,String password){
         User user=new User();
         return user.actualizar("password=? where username=?",password,username);
+    }
+
+    public boolean createTask(String title, String description, LocalDate deadline){
+        Task task=new Task();
+        task.insertar("(title,description,deadline,iduser) values (?,?,?,?)",title,description,deadline,userLogged.getIduser());
+        return true;
     }
 }
