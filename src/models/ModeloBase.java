@@ -83,49 +83,5 @@ public abstract class ModeloBase {
         }
     }
 
-    //Método genérico para ejecutar consulta SELECT
-    protected List<Object> ejecutarQuerySelect(String sql,Object ...parametros){
-        List<Object> result=new ArrayList<>();
-        try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
-             PreparedStatement preparedStatement = conexion.prepareStatement(sql)) {
-            // Establecer los valores de los parámetros
-            for (int i = 0; i < parametros.length; i++) {
-                preparedStatement.setObject(i + 1, parametros[i]);
-            }
-            ResultSet resultSet=preparedStatement.executeQuery();
-
-
-        }catch (SQLException e){
-            e.printStackTrace();
-
-        }
-        return null;
-    }
-
-    protected abstract Object createObjectFromResultSet(ResultSet resultSet) throws SQLException;
-
-    protected List<Object> leerTodos() {
-        List<Object> resultList = new ArrayList<>();
-
-        String sql = "SELECT * FROM " + getNombreTabla();
-
-        try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
-             PreparedStatement preparedStatement = conexion.prepareStatement(sql);
-             ResultSet resultSet = preparedStatement.executeQuery()) {
-
-            while (resultSet.next()) {
-                Object obj = createObjectFromResultSet(resultSet);
-                resultList.add(obj);
-            }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return resultList;
-    }
-
-
-
 }
 
