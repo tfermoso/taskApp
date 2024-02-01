@@ -6,5 +6,6 @@ public class Main {
 
         TaskController taskController=new TaskController();
         System.out.println(taskController.createUser("lolo","123",2));
+        System.out.println(taskController.editPassword("lolo","1111"));
     }
 }

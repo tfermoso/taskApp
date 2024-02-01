@@ -32,4 +32,10 @@ public class User extends ModeloBase{
                 ", rol=" + rol +
                 '}';
     }
+
+    public User login(String username, String password) {
+        String sql="select iduser,username,idrol,description from " +
+                "user left join rol on user.idrol=rol.idrol";
+
+    }
 }

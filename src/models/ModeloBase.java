@@ -75,6 +75,22 @@ public abstract class ModeloBase {
         }
     }
 
+    //Método genérico para ejecutar consulta SELECT
+    protected List<Object> ejecutarQuerySelect(String sql,Object ...parametros){
+        try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
+             PreparedStatement preparedStatement = conexion.prepareStatement(sql)) {
+            // Establecer los valores de los parámetros
+            for (int i = 0; i < parametros.length; i++) {
+                preparedStatement.setObject(i + 1, parametros[i]);
+            }
+            ResultSet resultSet=preparedStatement.executeQuery();
+
+        }catch (SQLException e){
+            e.printStackTrace();
+
+        }
+    }
+
     protected abstract Object createObjectFromResultSet(ResultSet resultSet) throws SQLException;
 
     protected List<Object> leerTodos() {
