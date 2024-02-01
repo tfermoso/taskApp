@@ -4,6 +4,7 @@ import models.Task;
 import models.User;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class TaskController {
     public User userLogged;
@@ -33,5 +34,14 @@ public class TaskController {
         Task task=new Task();
         task.insertar("(title,description,deadline,iduser) values (?,?,?,?)",title,description,deadline,userLogged.getIduser());
         return true;
+    }
+
+    public List<Task> getAllTaskByUser(){
+        Task task=new Task();
+        return task.getAllByUser(userLogged.getIduser());
+    }
+    public List<Task> getAllTask(){
+        Task task=new Task();
+        return null;
     }
 }

@@ -8,7 +8,6 @@ public class Main {
 
         TaskController taskController=new TaskController();
         taskController.login("admin","1234");
-        taskController.createTask("primera tarea","poner esto en marcha", LocalDate.now());
-
+        System.out.println(taskController.getAllTaskByUser());
     }
 }
