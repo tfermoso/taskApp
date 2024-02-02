@@ -20,6 +20,8 @@ public class TaskController {
         }
 
     }
+
+
     public boolean createUser(String username,String pass,int rol){
         User user=new User();
         return user.insertar("(username,password,idrol) values (?,?,?)",username,pass,rol);
@@ -42,6 +44,11 @@ public class TaskController {
     }
     public List<Task> getAllTask(){
         Task task=new Task();
-        return null;
+        return task.getAll();
+    }
+
+    public boolean completeTask(int idtask){
+        Task task=new Task();
+        return task.actualizar("status=? where idtask=?",true, idtask);
     }
 }
